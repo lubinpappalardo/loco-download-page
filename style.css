@@ -116,7 +116,7 @@ body {
     @media only screen and (max-width: 767px) {
         padding: 0 40px;
         justify-content: flex-start;
-        gap: 20vh;
+        gap: 100px;
     }
 }
 
@@ -128,7 +128,7 @@ header {
         margin: 0;
 
         @media only screen and (max-width: 767px) {
-            font-size: 22vw;
+            font-size: 26vw;
             text-align: center;
         }
     }
@@ -138,7 +138,7 @@ header {
         font-size: 1.8vw;
 
         @media only screen and (max-width: 767px) {
-            font-size: 3.4vw;
+            font-size: 4vw;
             text-align: center;
         }
     }
@@ -165,10 +165,20 @@ header {
         width: -moz-fit-content;
         width: fit-content;
         cursor: pointer;
+        transition: transform 0.2s;
 
         @media only screen and (max-width: 767px) {
             font-size: 20px;
             padding: 18px 32px;
+
+            &:active {
+                transform: scale(1.1);
+            }
+        }
+        @media only screen and (min-width: 768px) {
+            &:hover {
+                transform: scale(1.1);
+            }
         }
 
 
@@ -190,6 +200,18 @@ header {
         img {
             height: 40px;
             cursor: pointer;
+            transition: transform 0.2s;
+
+            @media only screen and (max-width: 767px) {
+                &:active {
+                    transform: scale(1.1);
+                }
+            }
+            @media only screen and (min-width: 768px) {
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
         }
 
         @media only screen and (max-width: 767px) {
