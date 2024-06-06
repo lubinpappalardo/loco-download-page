@@ -116,7 +116,7 @@ body {
     @media only screen and (max-width: 767px) {
         padding: 0 40px;
         justify-content: flex-start;
-        gap: 15vh;
+        gap: 20vh;
     }
 }
 
