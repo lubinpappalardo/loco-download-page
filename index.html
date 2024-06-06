@@ -40,8 +40,8 @@
             <button id="download-button"><span class="material-symbols-outlined">download</span>DOWNLOAD</button>
             <!-- <p id="download-options">OR download for:</p> -->
             <div id="download-options">
-                <img src="assets/android.svg" alt="Android icon">
-                <img src="assets/ios.svg" alt="IOS icon">
+                <img onclick="Androiddownload()" src="assets/android.svg" alt="Android icon">
+                <img onclick="IOSdownload()" src="assets/ios.svg" alt="IOS icon">
             </div>
         </div>
     </div>
@@ -50,5 +50,36 @@
         <img alt="Loco Icon" src="assets/icon.svg">
     </div>
 
+<script>
+    // Get the download button element
+const downloadButton = document.querySelector("#download-button");
+
+function IOSdownload() {
+    window.location.href = "";
+}
+
+function Androiddownload() {
+    window.location.href = "files/android/loco.apk";
+}
+
+// Add an event listener to the download button
+downloadButton.addEventListener("click", function() {
+    // Check if the device is iOS
+    if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
+        // Redirect to the iOS download page
+        IOSdownload();
+    }
+    // Check if the device is Android
+    else if (/Android/.test(navigator.userAgent)) {
+        // Redirect to the Android APK file
+        Androiddownload();
+    }
+    // If the device is neither iOS nor Android
+    else {
+        // Show an alert
+        alert("This application is only supported on iOS and Android devices.");
+    }
+});
+</script>
 </body>
 </html>
