@@ -14,7 +14,7 @@ html {
     -khtml-user-select: none; /* webkit (konqueror) browsers */
     -ms-user-select: none; /* IE10+ */
     user-select: none; /* standard syntax */
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 body {
@@ -93,10 +93,11 @@ body {
 
     @media only screen and (max-width: 767px) {
         padding: 40px;
+        padding-bottom: 20px;
         height: auto;
 
         img {
-            width: 70%;
+            width: 50%;
         }
     }
 }
@@ -126,7 +127,7 @@ header {
         margin: 0;
 
         @media only screen and (max-width: 767px) {
-            font-size: 12vh;
+            font-size: 22vw;
             text-align: center;
         }
     }
@@ -136,7 +137,7 @@ header {
         font-size: 1.8vw;
 
         @media only screen and (max-width: 767px) {
-            font-size: 1.9vh;
+            font-size: 3.4vw;
             text-align: center;
         }
     }
